@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: sky
+    uniqueID: 1648619501
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: stars
+    uniqueID: 2125028717
+    locked: 0
+  - name: moon_sun
+    uniqueID: 2979205975
+    locked: 0
+  - name: bg_buildings_bg
+    uniqueID: 1106205421
+    locked: 0
+  - name: bg_buildings_fr
+    uniqueID: 3585517571
+    locked: 0
+  - name: sbahn
+    uniqueID: 3380496843
+    locked: 0
+  - name: road
+    uniqueID: 1140044573
+    locked: 0
+  - name: buildings (main)
+    uniqueID: 2250291507
+    locked: 0
+  - name: bg_street_bg
+    uniqueID: 2295302837
+    locked: 0
+  - name: bg_street_anim
+    uniqueID: 4263027379
+    locked: 0
+  - name: mid
+    uniqueID: 2280376909
+    locked: 0
+  - name: front
+    uniqueID: 2694580965
+    locked: 0
+  - name: hud
+    uniqueID: 1001602947
+    locked: 0
+  - name: perso
+    uniqueID: 2811723571
+    locked: 0
+  - name: fr_street_bg
+    uniqueID: 3615902641
+    locked: 0
+  - name: fr_street_anim
+    uniqueID: 3385887995
+    locked: 0
+  - name: hud2
+    uniqueID: 1380993323
+    locked: 0
+  - name: hud3
+    uniqueID: 2778229129
+    locked: 0
+  - name: ui
+    uniqueID: 997505703
+    locked: 0
+  - name: up
+    uniqueID: 3444155231
+    locked: 0
