@@ -9,7 +9,7 @@ public class Zone_HOOV : MonoBehaviour
 
   public string zone_name;
 
-  void Start()
+  protected virtual void Start()
   {
     label.GetComponent<TextMeshProUGUI>().text = zone_name;
     label.GetComponent<TextMeshProUGUI>().enabled = false;

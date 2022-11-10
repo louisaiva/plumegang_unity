@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 4169940543276564525}
   - component: {fileID: 794159297711510383}
   m_Layer: 13
-  m_Name: Zone_ACTIV
+  m_Name: Zone_ACTIV 1
   m_TagString: zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

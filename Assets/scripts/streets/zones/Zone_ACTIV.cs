@@ -15,7 +15,7 @@ public class Zone_ACTIV : Zone_HOOV
   // si 'front', le perso doit descendre (S) pour activer la zone
   // si 'mid', inactivable (prendre avec E)
 
-  public void activate(){
+  public virtual void activate(){
     if (!is_active){
       Debug.Log(zone_name + " activated");
 

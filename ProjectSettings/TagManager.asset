@@ -10,6 +10,9 @@ TagManager:
   - zone_lactiv
   - zone_lhud
   - zone_hud
+  - street
+  - street_skin_bg
+  - street_skin_fr
   layers:
   - Default
   - TransparentFX

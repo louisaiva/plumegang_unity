@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 public class Perso : MonoBehaviour
@@ -38,9 +39,27 @@ public class Perso : MonoBehaviour
     //feet_perso_height = sman.GetComponent<Street_manager>().feet_perso_height;
     rb.gravityScale = 0;
 
-    // les animations
-    //anim = gameObject.GetComponent<Animation>();
+    // on entre dans la street
+    EnterStreet("home");
+
     }
+
+  public void EnterStreet(string dest_scene_name){
+
+    // on récupère les nouveaux composants
+    GameObject[] gameObjects = SceneManager.GetSceneByName(dest_scene_name).GetRootGameObjects();
+    foreach (GameObject go in gameObjects)
+    {
+      if (go.tag == "street"){
+        Debug.Log("found "+go.name);
+        sman = go;
+      }
+    }
+
+    ground = sman.transform.GetChild(0).GetChild(0).gameObject;
+    Debug.Log("on entre dans la street");
+
+  }
 
   void Events(){
 

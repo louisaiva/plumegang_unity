@@ -21,6 +21,13 @@ public class Bg_manager : MonoBehaviour
   private float starting_x;
 
   void Start(){
+
+    // on récupère la camera
+    cam = GameObject.FindWithTag("MainCamera");
+
+
+    // on récupère la largeur des backgrounds
+
     starting_x = transform.position.x;
 
     width_bg_builds = bg_builds.GetComponent<Renderer>().bounds.size.x;

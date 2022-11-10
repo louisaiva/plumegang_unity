@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -15,7 +16,14 @@ public class CameraFollow : MonoBehaviour
   void Start()
   {
 
-    //Y_OFF = 0f;
+    // on entre dans la street
+    EnterStreet();
+
+  }
+
+  public void EnterStreet(){
+
+    sman = GameObject.FindWithTag("street");
 
   }
 
@@ -25,8 +33,8 @@ public class CameraFollow : MonoBehaviour
     // X
 
     float final_x = player.transform.position.x;
-    float min_x = sman.GetComponent<Street_manager>().getBounds().x;
-    float max_x = sman.GetComponent<Street_manager>().getBounds().y;
+    float min_x = sman.GetComponent<Street>().getBounds().x;
+    float max_x = sman.GetComponent<Street>().getBounds().y;
 
     float x_movement = final_x - transform.position.x;
 
@@ -45,7 +53,7 @@ public class CameraFollow : MonoBehaviour
     // Y
 
     float final_y = player.transform.position.y + Y_OFF;
-    float min_y = sman.GetComponent<Street_manager>().getBounds().z;
+    float min_y = sman.GetComponent<Street>().getBounds().z;
     float y_movement = final_y - transform.position.y;
 
     // on vérifie si le perso est en bas de la map
