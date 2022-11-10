@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - label
+  - zone
+  - zone_activ
+  - zone_lactiv
+  - zone_lhud
+  - zone_hud
   layers:
   - Default
   - TransparentFX
@@ -13,13 +19,13 @@ TagManager:
   - UI
   - 
   - 
+  - Beings
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Items
+  - Player
+  - Zone_HOOV
+  - Zone_ACTIV
+  - Zone_LACTIV
   - 
   - 
   - 
