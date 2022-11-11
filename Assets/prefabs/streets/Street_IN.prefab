@@ -67,10 +67,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942138872424599489}
-  - component: {fileID: 1942138872424599494}
+  - component: {fileID: 6798210445626368111}
   m_Layer: 0
-  m_Name: street
-  m_TagString: street
+  m_Name: Street_IN
+  m_TagString: level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1942138872424599494
+--- !u!114 &6798210445626368111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,22 +100,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1942138872424599495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b00fe3490e1ed439df40790719fa7a, type: 3}
+  m_Script: {fileID: 11500000, guid: a0da78c283dcafd4d84db15b565c205e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  street_name: street
-  is_active: 0
-  bg: {fileID: 0}
-  fr: {fileID: 0}
+  level_name: house
   wall_ground: {fileID: 1942138873362184760}
   wall_air: {fileID: 2673707409840768777}
   wall_L: {fileID: 1942138872883049640}
   wall_R: {fileID: 1942138872848188177}
   ground: {fileID: 457869018615487891}
-  max_width: 0
-  min_y: 0
-  street_height: 0.78125
-  feet_perso_height: 0.06
+  bg: {fileID: 0}
+  fr: {fileID: 0}
 --- !u!1 &1942138872848188177
 GameObject:
   m_ObjectHideFlags: 0

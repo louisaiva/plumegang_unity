@@ -1,25 +1,30 @@
 
 using UnityEngine;
 
-public class Street : Level
+public class House : Level
 {
 
-  protected float no_bg_width = 50f;
+  protected GameObject bg;
+  protected GameObject fr;
+
 
   void Start()
   {
 
     if (level_name == null){
-      level_name = "street";
+      level_name = "house";
     }
+
+    level_height = 0.785f;
+
+    // on récupère les composants
+    bg = GameObject.FindWithTag("street_skin_bg");
+    fr = GameObject.FindWithTag("street_skin_fr");
 
     getSize();
     getBounds();
 
     // on donne la bonne taille et position aux bounds
-    float w = no_bg_width;
-    float h = level_height + feet_perso_height;
-
     wall_L.transform.localScale = new Vector3(1,h+10,0);
     wall_L.transform.position = new Vector3(min_x - wall_L.transform.localScale.x/2,0,0);
 
@@ -36,22 +41,20 @@ public class Street : Level
     // on donne la bonne taille et position au sol
     ground.transform.localScale = new Vector3(w,level_height + feet_perso_height,0);
     ground.transform.position = new Vector3(0,min_y + ground.transform.localScale.y/2,0);
-
   }
 
   // FONCTIONS SECONDAIRES
 
   public override Vector2 getSize(){
-    w = no_bg_width;
-    h = level_height + feet_perso_height;
+    w = bg.GetComponent<Renderer>().bounds.size.x;
+    h = bg.GetComponent<Renderer>().bounds.size.y;
     return new Vector2(w,h);
   }
 
   public override Vector3 getBounds(){
-    min_x = -no_bg_width/2;
-    max_x = no_bg_width/2;
-    min_y = -2;
+    min_x = bg.GetComponent<Renderer>().bounds.min.x;
+    max_x = bg.GetComponent<Renderer>().bounds.max.x;
+    min_y = bg.GetComponent<Renderer>().bounds.min.y;
     return new Vector3(min_x,max_x,min_y);
   }
-
 }

@@ -52,9 +52,12 @@ public class Perso : MonoBehaviour
     
     foreach (GameObject go in gameObjects)
     {
-      if (go.tag == "street"){
+      if (go.tag == "level"){
         sman = go;
       }
+    }
+    if (sman == null){
+      Debug.Log("pas de sman pour le perso :/");
     }
 
     ground = sman.transform.GetChild(0).GetChild(0).gameObject;
@@ -119,7 +122,7 @@ public class Perso : MonoBehaviour
       }
     }
 
-  // update de d'habitude
+// update de d'habitude
   void Update(){
 
     // events
@@ -137,7 +140,7 @@ public class Perso : MonoBehaviour
 
     // veloc
     //rbvelocity_y = rb.velocity.y;
-    }
+  }
 
   void FixedUpdate(){
 

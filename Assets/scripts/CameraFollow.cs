@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 
   public GameObject player;
   public GameObject sman; // street manager
+  private Level sman_comp; // street manager component
   public float timeOffset;
 
 
@@ -23,20 +24,33 @@ public class CameraFollow : MonoBehaviour
 
   public void EnterStreet(){
 
-    sman = GameObject.FindWithTag("street");
+    sman = GameObject.FindWithTag("level");
+
+    // on récupère les nouveaux composants
+    if (sman.GetComponent<Level>()){
+      sman_comp = sman.GetComponent<Level>();
+    }
+    else if (sman.GetComponent<Street>()){
+      sman_comp = sman.GetComponent<Street>();
+        }
+    else if (sman.GetComponent<House>()){
+      sman_comp = sman.GetComponent<House>();
+    }
+    else{
+      Debug.Log("pas de sman pour la cam :/");
+    }
 
   }
 
   void Update()
   {
-
-    // X
-
     if (sman){
 
+      // X
+
       float final_x = player.transform.position.x;
-      float min_x = sman.GetComponent<Street>().getBounds().x;
-      float max_x = sman.GetComponent<Street>().getBounds().y;
+      float min_x = sman_comp.getBounds().x;
+      float max_x = sman_comp.getBounds().y;
 
       float x_movement = final_x - transform.position.x;
 
@@ -55,7 +69,7 @@ public class CameraFollow : MonoBehaviour
       // Y
 
       float final_y = player.transform.position.y + Y_OFF;
-      float min_y = sman.GetComponent<Street>().getBounds().z;
+      float min_y = sman_comp.getBounds().z;
       float y_movement = final_y - transform.position.y;
 
       // on vérifie si le perso est en bas de la map
