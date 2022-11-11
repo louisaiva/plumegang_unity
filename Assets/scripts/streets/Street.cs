@@ -62,6 +62,8 @@ public class Street : MonoBehaviour
     else{
       Debug.Log("Street_manager: no bg found");
     }
+
+    Debug.Log("Street "+street_name+" loaded");
   }
 
 

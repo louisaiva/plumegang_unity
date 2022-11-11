@@ -25,7 +25,8 @@ public class Perso : MonoBehaviour
 
   private Vector3 velocity = Vector3.zero;
   private Vector2 inputs;
-  //private Animation anim;
+  
+  public Scene scene;
 
 
   public int activating_thg = 0; // 1 si activating on Z, -1 on S, 0 sinon
@@ -48,16 +49,16 @@ public class Perso : MonoBehaviour
 
     // on récupère les nouveaux composants
     GameObject[] gameObjects = SceneManager.GetSceneByName(dest_scene_name).GetRootGameObjects();
+    
     foreach (GameObject go in gameObjects)
     {
       if (go.tag == "street"){
-        Debug.Log("found "+go.name);
         sman = go;
       }
     }
 
     ground = sman.transform.GetChild(0).GetChild(0).gameObject;
-    Debug.Log("on entre dans la street");
+    //Debug.Log("on entre dans "+dest_scene_name);
 
   }
 
