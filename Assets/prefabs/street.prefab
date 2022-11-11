@@ -112,6 +112,8 @@ MonoBehaviour:
   wall_L: {fileID: 1942138872883049640}
   wall_R: {fileID: 1942138872848188177}
   ground: {fileID: 457869018615487891}
+  max_width: 0
+  min_y: 0
   street_height: 0.78125
   feet_perso_height: 0.06
 --- !u!1 &1942138872848188177
@@ -155,7 +157,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1942138872848188177}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aefc116af56f8c646b681544cc872f3c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -213,7 +215,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1942138872883049640}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aefc116af56f8c646b681544cc872f3c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -271,7 +273,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1942138873362184760}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aefc116af56f8c646b681544cc872f3c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -365,7 +367,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2673707409840768777}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aefc116af56f8c646b681544cc872f3c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
