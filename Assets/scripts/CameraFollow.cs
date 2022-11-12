@@ -49,8 +49,8 @@ public class CameraFollow : MonoBehaviour
       // X
 
       float final_x = player.transform.position.x;
-      float min_x = sman_comp.getBounds().x;
-      float max_x = sman_comp.getBounds().y;
+      float min_x = sman_comp.getBounds().min.x;
+      float max_x = sman_comp.getBounds().max.x;
 
       float x_movement = final_x - transform.position.x;
 
@@ -69,7 +69,7 @@ public class CameraFollow : MonoBehaviour
       // Y
 
       float final_y = player.transform.position.y + Y_OFF;
-      float min_y = sman_comp.getBounds().z;
+      float min_y = sman_comp.getBounds().min.y;
       float y_movement = final_y - transform.position.y;
 
       // on vérifie si le perso est en bas de la map

@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 586191545}
   - component: {fileID: 586191544}
   - component: {fileID: 586191548}
+  - component: {fileID: 586191549}
   m_Layer: 5
   m_Name: ui
   m_TagString: ui_manager
@@ -723,6 +724,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb1129cdf2588a4eb68f841aac6697b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &586191549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586191543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ae75ea52e1c97488c3b35619dda034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateInterval: 0.5
+  fps_lab: {fileID: 632052979}
 --- !u!1 &632052979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1673,7 @@ MonoBehaviour:
   player: {fileID: 735829489}
   cam: {fileID: 519420028}
   sman: {fileID: 0}
+  uiman: {fileID: 0}
 --- !u!1 &2024880958
 GameObject:
   m_ObjectHideFlags: 0

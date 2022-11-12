@@ -46,8 +46,8 @@ public class Level : MonoBehaviour
     return new Vector2(w,h);
   }
 
-  public virtual Vector3 getBounds(){
-    return new Vector3(min_x,max_x,min_y);
+  public virtual Bounds getBounds(){
+    return new Bounds(new Vector3(min_x+w/2,min_y+h/2,0),new Vector3(w,h,0));
   }
 
 }

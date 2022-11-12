@@ -1,10 +1,16 @@
 
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Street : Level
 {
 
   protected float no_bg_width = 50f;
+
+  public GameObject road_tm; // tilemap de la route
+  public TileBase tile;
+  public BoundsInt area;
+
 
   void Start()
   {
@@ -13,7 +19,6 @@ public class Street : Level
       level_name = "street";
     }
 
-    getSize();
     getBounds();
 
     // on donne la bonne taille et position aux bounds
@@ -37,6 +42,47 @@ public class Street : Level
     ground.transform.localScale = new Vector3(w,level_height + feet_perso_height,0);
     ground.transform.position = new Vector3(0,min_y + ground.transform.localScale.y/2,0);
 
+    createTilemap();
+
+  }
+
+  void Update()
+  {
+
+  }
+
+  // FONCTIONS ONCE
+
+  void createTilemap(){
+
+    // on récupère la tilemap de la route
+    road_tm = GameObject.Find("tilemaps").transform.Find("road").gameObject;
+
+    // on place les tiles de la route à la bonne position
+    Tilemap tm = road_tm.GetComponent<Tilemap>();
+
+    // on clean tout
+    tm.ClearAllTiles();
+
+    // on définit la bonne area pour la route
+    area = new BoundsInt();
+    area.xMin = (int)min_x;
+    area.xMax = (int)max_x;
+    area.yMin = (int)min_y;
+    area.yMax = (int)min_y + 1;
+
+    // on récupère la tile de tiles/road
+    tile = Resources.Load("tiles/road") as TileBase;
+
+    // on place les tiles au bon endroit
+    for (int x = area.xMin; x < area.xMax; x++)
+    {
+        tm.SetTile(new Vector3Int(x ,(int) min_y, 0), tile);
+    }
+    //tm.RefreshAllTiles();
+
+    Debug.Log("road tilemap loaded");
+
   }
 
   // FONCTIONS SECONDAIRES
@@ -47,11 +93,12 @@ public class Street : Level
     return new Vector2(w,h);
   }
 
-  public override Vector3 getBounds(){
+  public override Bounds getBounds(){
+    getSize();
     min_x = -no_bg_width/2;
     max_x = no_bg_width/2;
     min_y = -2;
-    return new Vector3(min_x,max_x,min_y);
+    return new Bounds(new Vector3(min_x+w/2,min_y+h/2,0),new Vector3(w,h,0));
   }
 
 }

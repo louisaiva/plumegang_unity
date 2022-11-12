@@ -21,7 +21,6 @@ public class House : Level
     bg = GameObject.FindWithTag("street_skin_bg");
     fr = GameObject.FindWithTag("street_skin_fr");
 
-    getSize();
     getBounds();
 
     // on donne la bonne taille et position aux bounds
@@ -51,10 +50,11 @@ public class House : Level
     return new Vector2(w,h);
   }
 
-  public override Vector3 getBounds(){
+  public override Bounds getBounds(){
+    getSize();
     min_x = bg.GetComponent<Renderer>().bounds.min.x;
     max_x = bg.GetComponent<Renderer>().bounds.max.x;
     min_y = bg.GetComponent<Renderer>().bounds.min.y;
-    return new Vector3(min_x,max_x,min_y);
+    return new Bounds(new Vector3(min_x+w/2,min_y+h/2,0),new Vector3(w,h,0));
   }
 }

@@ -11,11 +11,6 @@ public class Clock : MonoBehaviour
   public float tpd; // tick per day
   private int days,ticks,hours,minutes,seconds;
 
-  void Start()
-  {
-
-  }
-
   void FixedUpdate()
   {
     ticks++;
