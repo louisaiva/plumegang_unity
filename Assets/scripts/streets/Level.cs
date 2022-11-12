@@ -18,12 +18,12 @@ public class Level : MonoBehaviour
   protected float min_x;
   protected float max_x;
   protected float min_y;
-  public float w;
-  public float h;
+  [ReadOnly] public float w;
+  [ReadOnly] public float h;
 
   // dimensions du ground
-  protected float level_height = 0.94f;
-  protected float feet_perso_height = 0.06f;
+  [ReadOnly,SerializeField] protected float level_height = 0.94f;
+  [ReadOnly,SerializeField] protected float feet_perso_height = 0.06f;
 
 
   void Start()
