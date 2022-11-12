@@ -18,8 +18,8 @@ public class Level : MonoBehaviour
   protected float min_x;
   protected float max_x;
   protected float min_y;
-  protected float w;
-  protected float h;
+  public float w;
+  public float h;
 
   // dimensions du ground
   protected float level_height = 0.94f;
